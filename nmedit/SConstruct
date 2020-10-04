@@ -1,0 +1,61 @@
+
+src = 'main.cc mainwindow.cc synthview.cc patchview.cc sectionview.cc moduleview.cc'
+
+srcfiles = [('src/' + x) for x in Split(src)]
+
+nmedit = Environment(CPPPATH = ['../libs/libppf', '../libs/libpdl',
+                                '../libs/libnmpatch', '../libs/libnmprotocol'],
+                     LIBPATH = ['../libs/libppf', '../libs/libpdl', 
+                                '../libs/libnmpatch', '../libs/libnmprotocol', 
+                                '/lib', '/usr/lib/', '/usr/local/lib'])
+                    #LIBS = ['nmprotocol', 'nmpatch', 'pdl', 'ppf']
+
+opts = Options('nmedit.conf')
+opts.Add(PathOption('PREFIX',
+                    'Install dir (Defult: /usr/local)',
+                    '/usr/local'))
+opts.Update(nmedit)
+opts.Save('nmedit.conf', nmedit)
+
+conf = Configure(nmedit)
+
+conf.env.Append(CPPFLAGS='-DVERSION=\'"0.1"\'')
+
+if conf.CheckLib('asound'):
+   conf.env.Append(CPPFLAGS=' -DALSA')
+
+if conf.CheckFunc('socket'):
+   conf.env.Append(CPPFLAGS=' -DNETMIDI')
+
+if not conf.CheckLib('ppf'):
+   print "libppf missing!"
+   Exit(1);
+
+if not conf.CheckLib('pdl'):
+   print "libpdl missing!"
+   Exit(1);
+
+if not conf.CheckLib('nmpatch'):
+   print "libnmpatch missing!"
+   Exit(1);
+
+if not conf.CheckLib('nmprotocol'):
+   print "libnmprotocol missing!"
+   Exit(1);
+
+if not conf.CheckLib('fltk'):
+   print 'libfltk missing!'
+   Exit(1);
+
+conf.env.ParseConfig('fltk-config --cxxflags --ldflags')
+
+nmedit = conf.Finish()
+
+idir_prefix = '$PREFIX'
+idir_bin    = '$PREFIX/bin'
+
+prog = nmedit.Program('nmedit', srcfiles)
+
+nmedit.Install(idir_bin, prog)
+nmedit.Alias('install', idir_prefix)
+
