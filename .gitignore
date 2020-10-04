@@ -4,3 +4,4 @@ config.log
 config.status
 libtool
 *.swp
+autom4te.cache/
