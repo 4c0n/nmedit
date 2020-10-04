@@ -1,5 +1,4 @@
-
-INCLUDES = -I..
+AM_CPPFLAGS = -I..
 
 lib_LTLIBRARIES = libpdl.la
 

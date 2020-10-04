@@ -1,4 +1,4 @@
-INCLUDES = -I..
+AM_CPPFLAGS = -I..
 AM_CXXFLAGS = -DTCL_H="<tcl8.4/tcl.h>"
 
 lib_LTLIBRARIES = libppf.la

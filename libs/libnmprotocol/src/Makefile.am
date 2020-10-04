@@ -1,5 +1,5 @@
 AM_CXXFLAGS = -DALSA -DNETMIDI -DLIBPATH='"$(pkglibdir)"'
-INCLUDES = -I.. -I../../libpdl -I../../libnmpatch
+AM_CPPFLAGS = -I.. -I../../libpdl -I../../libnmpatch
 
 EXTRA_DIST = patch.pdl midi.pdl
 

@@ -1,4 +1,4 @@
-INCLUDES = -I..
+AM_CPPFLAGS = -I..
 AM_LDFLAGS = -L../src
 
 check_PROGRAMS = lookup

@@ -1,5 +1,4 @@
-
-INCLUDES = -I.. -I../../libpdl -I../../libnmpatch
+AM_CPPFLAGS = -I.. -I../../libpdl -I../../libnmpatch
 AM_LDFLAGS = -L../src -L../../libpdl/src -L../../libnmpatch/src
 
 LDADD = -lpdl -lnmprotocol -lnmpatch -ltcl8.4
