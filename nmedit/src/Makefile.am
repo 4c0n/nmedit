@@ -5,7 +5,7 @@ INCLUDES = \
 	-I../../libs/libppf \
 	-I../../libs/libnmpatch \
 	-I../../libs/libnmprotocol \
-	-I/usr/lib/wx/include/gtk-2.4 \
+	-I/usr/lib64/wx/include/gtk-unicode-2.0 \
 	`fltk-config --cxxflags`
 
 LDFLAGS = \

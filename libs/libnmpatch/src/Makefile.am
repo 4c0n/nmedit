@@ -1,5 +1,5 @@
 AM_CXXFLAGS = -DLIBPATH='"$(pkglibdir)"'
-AM_CPPFLAGS = -I.. -I../../libppf
+AM_CPPFLAGS = -I.. -I../../libppf -I../../libpdl
 
 EXTRA_DIST = module.ppf
 

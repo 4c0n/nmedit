@@ -22,7 +22,7 @@
 using namespace std;
 
 NMLexer::NMLexer( istream* arg_yyin , ostream* arg_yyout  )
-	: yyFlexLexer( arg_yyin, yyout )
+	: yyFlexLexer( *arg_yyin, yyout )
 {
 	;
 }
