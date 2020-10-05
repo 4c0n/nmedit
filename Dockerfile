@@ -12,6 +12,7 @@ RUN dnf install -y \
         flex \
         bison \
         diffutils \
+        alsa-lib \
         alsa-lib-devel \
         tcl-devel \
     ; \
