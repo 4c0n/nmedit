@@ -1,7 +1,7 @@
 AM_CXXFLAGS = -DLIBPATH='"$(pkglibdir)"'
 AM_CPPFLAGS = -I.. -I../../libppf -I../../libpdl
 
-EXTRA_DIST = module.ppf
+EXTRA_DIST = module.ppf patch.pdl
 
 lib_LTLIBRARIES = libnmpatch.la
 

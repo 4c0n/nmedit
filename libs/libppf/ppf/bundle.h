@@ -20,6 +20,8 @@
 #ifndef BUNDLE_H
 #define BUNDLE_H
 
+#define USE_INTERP_RESULT
+
 #include <string>
 #include <map>
 
