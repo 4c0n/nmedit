@@ -15,4 +15,4 @@ AM_LDFLAGS = \
 bin_PROGRAMS = patchloader
 
 patchloader_SOURCES = patchloader.cc
-patchloader_LDADD =-lpdl -lnmprotocol -lnmpatch -lppf -ltcl8.6
+patchloader_LDADD =-lpdl -lnmprotocol -lnmpatch -lppf -ltcl8.6 -lasound
