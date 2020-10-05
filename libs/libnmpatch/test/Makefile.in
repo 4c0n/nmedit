@@ -305,7 +305,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AM_CPPFLAGS = -I.. -I../../libppf
 AM_LDFLAGS = -L../src -L../../libppf/src
-LDADD = -lnmpatch -lppf -ltcl8.4
+LDADD = -lnmpatch -lppf -ltcl8.6
 libnmpatch_test1_SOURCES = libnmpatch_test1.cc
 libnmpatch_test2_SOURCES = libnmpatch_test2.cc
 all: all-am

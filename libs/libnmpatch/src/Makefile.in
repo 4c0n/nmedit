@@ -378,8 +378,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AM_CXXFLAGS = -DLIBPATH='"$(pkglibdir)"'
-AM_CPPFLAGS = -I.. -I../../libppf
-EXTRA_DIST = module.ppf
+AM_CPPFLAGS = -I.. -I../../libppf -I../../libpdl
+EXTRA_DIST = module.ppf patch.pdl
 lib_LTLIBRARIES = libnmpatch.la
 libnmpatch_la_SOURCES = patchparser.yy patchlexer.ll nmlexer.cc cable.cc ctrlmap.cc knobmap.cc module.cc modulesection.cc morph.cc morphmap.cc note.cc patch.cc moduletype.cc
 libnmpatch_la_LIBADD = -L../../libppf/src -lppf
