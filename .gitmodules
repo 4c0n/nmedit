@@ -1,0 +1,3 @@
+[submodule "libs/libppf"]
+	path = libs/libppf
+	url = git@github.com:4c0n/libppf.git
