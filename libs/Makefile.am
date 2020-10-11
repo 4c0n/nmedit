@@ -1,1 +1,1 @@
-SUBDIRS=libnmpatch libnmprotocol
+SUBDIRS=libnmprotocol
