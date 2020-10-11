@@ -1,1 +1,1 @@
-SUBDIRS=libnmpatch libpdl libnmprotocol libppf
+SUBDIRS=libnmpatch libpdl libnmprotocol

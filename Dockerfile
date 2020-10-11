@@ -18,6 +18,9 @@ RUN dnf install -y \
     ; \
     dnf clean all;
 
+COPY --from=4c0n/libppf:latest /usr/local/include /usr/include
+COPY --from=4c0n/libppf:latest /usr/local/lib/libppf.la /usr/lib/libppf.la
+COPY --from=4c0n/libppf:latest /usr/local/lib/libppf.a /usr/lib/libppf.a
 COPY . /app/nmedit
 
 RUN set -eux; \
