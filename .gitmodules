@@ -7,3 +7,6 @@
 [submodule "libs/libnmprotocol"]
 	path = libs/libnmprotocol
 	url = git@github.com:4c0n/libnmprotocol.git
+[submodule "libs/libnmpatch"]
+	path = libs/libnmpatch
+	url = git@github.com:4c0n/libnmpatch.git
