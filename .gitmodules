@@ -4,3 +4,6 @@
 [submodule "libs/libpdl"]
 	path = libs/libpdl
 	url = git@github.com:4c0n/libpdl.git
+[submodule "libs/libnmprotocol"]
+	path = libs/libnmprotocol
+	url = git@github.com:4c0n/libnmprotocol.git
